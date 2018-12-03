@@ -7,7 +7,7 @@ import {  FileUploader, FileSelectDirective } from 'ng2-file-upload/ng2-file-upl
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 
 
-const URL = 'http://localhost:3000/addPhoto';
+const URL = 'https://movies-final.herokuapp.com/addPhoto';
 
 @Component({
   selector: 'app-movies',
