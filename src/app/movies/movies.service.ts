@@ -17,7 +17,7 @@ export class MoviesService {
 
   getMovie(id){
     console.log(id)
-    let movie = this.http.get(`https://movies-final.herokuapp.com/${id}`)
+    let movie = this.http.get(`https://movies-final.herokuapp.com/getMovie/${id}`)
     if(movie){
       return movie
     }
