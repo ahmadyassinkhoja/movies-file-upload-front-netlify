@@ -10,14 +10,14 @@ export class MoviesService {
 
   }
   // server movies url
-  moviesurl = 'http://localhost:3000/movies'
+  moviesurl = 'https://movies-final.herokuapp.com/movies'
 
   // getting data from server
   movies = this.http.get(this.moviesurl)
 
   getMovie(id){
     console.log(id)
-    let movie = this.http.get(`http://localhost:3000/getMovie/${id}`)
+    let movie = this.http.get(`https://movies-final.herokuapp.com/${id}`)
     if(movie){
       return movie
     }
@@ -28,7 +28,7 @@ export class MoviesService {
         name: title.value,
         genre: genre.value,
         length: length.value,
-        image: 'http://localhost:3000/uploads/' + photo.files[0].name
+        image: 'https://movies-final.herokuapp.com/uploads/' + photo.files[0].name
       }
 
       const httpOptions = {
@@ -39,7 +39,7 @@ export class MoviesService {
       };
 
       // server movies add url
-      const addmoviesurl = 'http://localhost:3000/addMovie'
+      const addmoviesurl = 'https://movies-final.herokuapp.com/addMovie'
 
       this.http.post(addmoviesurl,newMovie, httpOptions) .subscribe(data => {
         console.log(data);
@@ -61,7 +61,7 @@ export class MoviesService {
       })
     };
 
-    const updateMovieUrl = `http://localhost:3000/updateMovie/${movie._id}`
+    const updateMovieUrl = `https://movies-final.herokuapp.com/${movie._id}`
 
     this.http.put(updateMovieUrl,movie, httpOptions) .subscribe(data => {
       console.log(data);
@@ -79,7 +79,7 @@ export class MoviesService {
     };
 
     // server movies add url
-    const deleteMovie = `http://localhost:3000/deleteMovie/${movie._id}`
+    const deleteMovie = `https://movies-final.herokuapp.com/${movie._id}`
 
     this.http.delete(deleteMovie, httpOptions) .subscribe(data => {
       console.log(data);
