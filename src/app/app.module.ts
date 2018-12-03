@@ -14,7 +14,8 @@ import { MoviesService } from './movies/movies.service'
 import { AppRoutingModule } from './app-routing.module'
 
 // import { AngularFileUploaderModule } from "angular-file-uploader";
-import { FileSelectDirective } from 'ng2-file-upload';
+// import { FileSelectDirective } from 'ng2-file-upload';
+import { FileUploadModule } from "ng2-file-upload";
 
 
 @NgModule({
@@ -22,14 +23,15 @@ import { FileSelectDirective } from 'ng2-file-upload';
     AppComponent,
     MovieComponent,
     MoviesComponent,
-    FileSelectDirective
+    // FileSelectDirective
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FileUploadModule
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]
