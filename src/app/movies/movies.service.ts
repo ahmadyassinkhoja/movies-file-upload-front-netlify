@@ -67,7 +67,8 @@ export class MoviesService {
       console.log(data);
     });
 
-    window.location.reload();
+    // window.location.reload();
+    window.location.href = "/"
   }
 
   deleteMovie(movie){
