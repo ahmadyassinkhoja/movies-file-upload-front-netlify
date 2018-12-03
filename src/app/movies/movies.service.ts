@@ -31,6 +31,8 @@ export class MoviesService {
         image: 'https://movies-final.herokuapp.com/uploads/' + photo.files[0].name
       }
 
+      console.log('new movie --> ', newMovie)
+
       const httpOptions = {
         headers: new HttpHeaders({
           'Content-Type':  'application/json',
