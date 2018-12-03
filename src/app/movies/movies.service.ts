@@ -61,7 +61,7 @@ export class MoviesService {
       })
     };
 
-    const updateMovieUrl = `https://movies-final.herokuapp.com/${movie._id}`
+    const updateMovieUrl = `https://movies-final.herokuapp.com/updateMovie/${movie._id}`
 
     this.http.put(updateMovieUrl,movie, httpOptions) .subscribe(data => {
       console.log(data);
