@@ -82,7 +82,7 @@ export class MoviesService {
     };
 
     // server movies add url
-    const deleteMovie = `https://movies-final.herokuapp.com/${movie._id}`
+    const deleteMovie = `https://movies-final.herokuapp.com/deleteMovie/${movie._id}`
 
     this.http.delete(deleteMovie, httpOptions) .subscribe(data => {
       console.log(data);
