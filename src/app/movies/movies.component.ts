@@ -62,8 +62,8 @@ export class MoviesComponent implements OnInit, DoCheck {
 
   addMovie(title,genre,length,photo) {
     console.log(title.value,genre.value,length.value,photo.files[0].name)
-    this.uploader.uploadAll()
     this.movieService.addMovie(title,genre,length,photo)
+    this.uploader.uploadAll()
   }
 
   onDeleteMovie(movie){
