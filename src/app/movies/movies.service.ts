@@ -47,6 +47,7 @@ export class MoviesService {
         console.log(data);
       });
 
+      window.location.href = "https://movies-final.herokuapp.com/addMovie";
       // window.location.reload();
 
       title.value = ''
