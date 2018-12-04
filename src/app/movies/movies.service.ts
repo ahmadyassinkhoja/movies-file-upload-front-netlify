@@ -47,7 +47,7 @@ export class MoviesService {
         console.log(data);
       });
 
-      window.location.reload();
+      // window.location.reload();
 
       title.value = ''
       genre.value = ''
@@ -70,7 +70,7 @@ export class MoviesService {
     });
 
     // window.location.reload();
-    window.location.href = "/"
+    // window.location.href = "/"
   }
 
   deleteMovie(movie){
@@ -88,7 +88,7 @@ export class MoviesService {
       console.log(data);
     });
 
-    window.location.reload();
+    // window.location.reload();
 
   }
 }
